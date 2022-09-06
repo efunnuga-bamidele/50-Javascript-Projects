@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Inverter Calculator</title>
+</head>
+
+<body>
+  <div class="flex-container">
+    <!-- Box  -->
+    <div class="box_1">
+      <h2>Inverter Capacity Calculation</h2>
+      <form action="">
+        <div class="form-group">
+          <label for="">Total House Load</label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="totalHouseLoad" name="totalHouseLoad" value="0">
+        </div>
+        <div class="form-group">
+          <label for="">Power Factor</label>
+          <span class="unit"> (Kw)</span>
+          <input type="number" id="powerFactor" name="powerFactor" value=0.8>
+
+        </div>
+        <div class="form-group">
+          <label for="">Actial Inverter Rating based on Load</label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="actualRating" name="actualRating" readonly disabled>
+
+        </div>
+        <div class="form-group">
+          <label for="">Inverter Rating + 20% Buffer</label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="ratingBuffer" name="ratingBuffer" readonly disabled>
+        </div>
+        <div class="form-group">
+          <label for="">Inverter Rating</label>
+          <span class="unit"> (KVA)</span>
+          <input type="number" id="kvaRating" name="kvaRating" readonly disabled>
+        </div>
+      </form>
+      <button class="btn" id="btn-inverter">Calculate</button>
+    </div>
+    <!-- Box  -->
+    <div class="box_1">
+      <h2>Backup Time and Panel Capacity Calculation</h2>
+      <form action="">
+        <div class="form-group">
+          <label for="">Manual Calculation</label>
+          <input type="checkbox" id="manualCalculation" name="manualCalculation">
+          <label for="">Automatic Calculation</label>
+          <input type="checkbox" id="automaticCalculation" name="automaticCalculation">
+        </div>
+        <div class="form-group">
+          <label for="">Battery Capacity</label><span class="unit"> (Ah)</span>
+
+          <input type="number" id="batteryCapacity" name="batteryCapacity" value="0">
+        </div>
+        <div class="form-group">
+          <label for="">Battery Voltage</label><span class="unit"> (Volts)</span>
+          <input type="number" id="batteryVoltage" name="batteryVoltage" value="0">
+
+        </div>
+        <div class="form-group">
+          <label for="">Battery Quantity</label>
+          <span class="unit"> (Pcs)</span>
+          <input type="number" id="batteryQuantity" name="batteryQuantity" value="0">
+
+        </div>
+        <div class="form-group">
+          <label for="">Total House Load</label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="houseLoad" name="houseLoad" value="0">
+        </div>
+        <div class="form-group">
+          <label for="">Panel Power</label>
+          <span class="unit"> (KVA)</span>
+          <input type="number" id="panelPower" name="panelPower" value="0">
+        </div>
+        <div class="form-group">
+          <label for="">Panel Voltage</label><span class="unit"> (Volts)</span>
+          <input type="number" id="panelVoltage" name="panelVoltage" value="0">
+        </div>
+        <div class="form-group">
+          <label for="">Backup Time</label><span class="unit"> (Hours)</span>
+          <input type="number" id="backupTime" name="backupTime" disabled>
+
+        </div>
+        <div class="form-group">
+          <label for="">Battery Power</label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="batteryPower" name="batteryPower" disabled>
+
+        </div>
+        <div class="form-group">
+          <label for="">Expected Battery Power </label>
+          <span class="unit"> (Watts)</span>
+          <input type="number" id="expBatteryPower" name="expBatteryPower" disabled>
+        </div>
+        <div class="form-group">
+          <label for="">Expected Panel Quantity</label>
+          <span class="unit"> (Pcs)</span>
+          <input type="number" id="expPanelCapacity" name="expPanelCapacity" disabled>
+        </div>
+      </form>
+      <button class="btn" id="btn-battery">Calculate</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
